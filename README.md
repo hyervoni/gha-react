@@ -6,6 +6,8 @@
 
     https://github.com/alelopezperez/areweleetcodeyet/blob/main/.github/workflows/main.yml
 
+    https://antonputra.com/amazon/deploy-react-to-s3-and-cloudfront/#setup-cicd-pipeline-for-react-app-using-github-actions
+
 0. Crear usuario de aws con permiso total en S3 y guardar AWS_ACCESS_KEY_ID | AWS_SECRET_ACCESS_KEY
 
 1. Crear bucket público con ACL allow
