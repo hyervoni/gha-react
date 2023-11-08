@@ -56,5 +56,4 @@ jobs:
           AWS3: ${{ secrets.AWS_S3_BUCKET }}
           DIST: build
         run: |
-          aws s3 rm s3://$AWS3 --recursive
-       #  aws s3 sync --delete ${{ env.DIST }} s3://$AWS3
+          aws s3 sync --delete ${{ env.DIST }} s3://$AWS3
