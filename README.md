@@ -5,7 +5,7 @@
     https://www.youtube.com/watch?v=l97zYgiB57k
 
     https://github.com/alelopezperez/areweleetcodeyet/blob/main/.github/workflows/main.yml
-    
+
 0. Crear usuario de aws con permiso total en S3 y guardar AWS_ACCESS_KEY_ID | AWS_SECRET_ACCESS_KEY
 
 1. Crear bucket público con ACL allow
@@ -68,7 +68,6 @@
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_REGION: 'us-east-1'   
             SOURCE_DIR: 'build'   
-
 
 4. Bucket
 
