@@ -7,16 +7,16 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>React app using Github Actions</code>
+          <code>React App using Github Actions</code>
         </p>
-        {/* <a
+        <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a> */}
+        </a>
       </header>
     </div>
   );
