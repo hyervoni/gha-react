@@ -51,4 +51,5 @@ jobs:
       - name: Deploy to AWS S3
         env:
           AWS3: ${{ secrets.AWS_S3_BUCKET }}
-        run: aws s3 sync --delete ./build s3://$AWS3
+        run: aws s3 sync --delete ./build s3://$AWS3 --acl=public-read
+
