@@ -44,20 +44,11 @@ jobs:
           aws-region: us-east-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
- 
-      - name: Remove from S3
-        uses: vitorsgomes/s3-rm-action@master
-        with:
-          args: --recursive
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
-          # PATH_TO_DELETE: ${{ github.event.ref }}
 
       - name: Deploy to AWS S3
         env:
           AWS3: ${{ secrets.AWS_S3_BUCKET }}
           DIST: build
-        run: aws s3 sync --delete ${{ env.DIST }} s3://$AWS3
+        run: |
+          aws s3 rm s3://$AWS3 --recursive
+       #  aws s3 sync --delete ${{ env.DIST }} s3://$AWS3
