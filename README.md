@@ -80,4 +80,3 @@ index.html file url
 Static website hosting
 
     http://react-app-gha.s3-website-us-east-1.amazonaws.com/
-
