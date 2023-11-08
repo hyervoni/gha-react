@@ -4,6 +4,7 @@
 
     https://www.youtube.com/watch?v=l97zYgiB57k
 
+0. Crear usuario de aws con permiso total en S3 y guardar AWS_ACCESS_KEY_ID | AWS_SECRET_ACCESS_KEY
 
 1. Crear bucket público con ACL allow
 
