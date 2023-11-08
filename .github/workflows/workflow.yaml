@@ -39,7 +39,7 @@ jobs:
       #     SOURCE_DIR: 'build'   
 
       - name: AWS Auth 
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
