@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>React App using Github Actions!!! Esto cambia? y por que pasa?</code>
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
