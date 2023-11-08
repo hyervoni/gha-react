@@ -2,9 +2,11 @@
 
     https://www.youtube.com/watch?v=HVw_NZUhDKs
 
-1. Crear bucket público 
+1. Crear bucket público con ACL allow
 
     react-app-gha
+
+    Object Ownership - allow ACLs
 
 2. Secretos
 
