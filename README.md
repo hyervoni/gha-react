@@ -11,6 +11,21 @@
 
     Object Ownership - allow ACLs
 
+    Bucket Policy
+
+    {
+        "Version": "2012-10-17",
+        "Id": "Policy1568691946888",
+        "Statement": [
+            {
+                "Sid": "Stmt1568691936002",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:*",
+                "Resource": "arn:aws:s3:::react-app-gha/*"
+            }
+        ]
+    }
 2. Secretos
 
     AWS_S3_BUCKET=react-app-gha
