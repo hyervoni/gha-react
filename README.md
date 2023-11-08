@@ -19,6 +19,10 @@
 2. Crear ROL OIDC en aws
 
         https://www.youtube.com/watch?v=k2Tv-EJl7V4
+        
+        https://www.youtube.com/watch?v=mel6N62WZb0&t=467s
+
+        https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-cloud-providers
 
     AWS por seguridad ya no utiliza aws-access-key-id ni aws-secret-access-key
 
