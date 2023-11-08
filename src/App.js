@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>React App using Github Actions!!! Esto cambia?</code>
+          <code>React App using Github Actions!!! Esto cambia? y por que pasa?</code>
         </p>
         <a
           className="App-link"
