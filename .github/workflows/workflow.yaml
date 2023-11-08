@@ -41,7 +41,7 @@ jobs:
       #     AWS_REGION: 'us-east-1'   
       #     SOURCE_DIR: 'build'   
 
-      - name: AWS AUTH   
+      - name: AWS Auth 
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: us-east-1
