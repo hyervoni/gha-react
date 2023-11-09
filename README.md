@@ -42,6 +42,7 @@
         
         Edit Trusted entities to: 
  
+         ```
             {
                 "Version": "2012-10-17",
                 "Statement": [
@@ -60,16 +61,18 @@
                     }
                 ]
             }
-
+        ```
+        
     * Ajustar el workflow
 
-            name: AWS Auth 
-            uses: aws-actions/configure-aws-credentials@v4
-            with:
-            aws-region: us-east-1
-            role-to-assume: arn:aws:iam::590939892034:role/OIDC_GITHUB_CICD
-            role-session-name: S3Deployment
-        
+        ```
+           - name: AWS Auth 
+             uses: aws-actions/configure-aws-credentials@v4
+             with:
+               aws-region: us-east-1
+               role-to-assume: arn:aws:iam::590939892034:role/OIDC_GITHUB_CICD
+               role-session-name: S3Deployment
+        ```
 
 3. Crear bucket público
 
@@ -77,6 +80,7 @@
 
     Bucket Policy
 
+    ```
         {
             "Version": "2012-10-17",
             "Id": "Policy1568691946888",
@@ -90,7 +94,8 @@
                 }
             ]
         }
-    
+    ```
+
 4. Secretos
 
         AWS_S3_BUCKET=react-app-gha
@@ -99,6 +104,7 @@
 
 5. Workflow
 
+     ```
         name: React CI
 
         on:
@@ -145,6 +151,7 @@
                 DIST: build
                 run: |
                 aws s3 sync --delete ${{ env.DIST }} s3://$AWS3
+        ```
 
 6. Bucket
 
@@ -155,3 +162,22 @@ index.html file url
 Static website hosting
 
     http://react-app-gha.s3-website-us-east-1.amazonaws.com/
+
+7. Revisar, aws no permite eliminar datos del bucket, para esto se usa el rol oidc, sin embargo es posible que no se necesita realizar delete files en el bucket.
+
+   `aws s3 sync --delete ${{ env.DIST }} s3://$AWS3`
+
+    ```
+        - uses: actions/setup-python@v2
+            with:
+            python-version: '3.7'
+        - name: Install dependencies
+            run: |
+            python -m pip install --upgrade pip
+            pip install awscli
+        - run: aws s3 sync build s3://$AWS3 --region us-east-1
+            env:
+            AWS3: ${{ secrets.AWS_S3_BUCKET }}
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    ```
