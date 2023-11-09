@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          React App on AWS S3 bucket using Github Actions!!! 
+          React App on AWS S3 bucket using Github Actions!!! no delete 
         </p>
         <a
           className="App-link"
